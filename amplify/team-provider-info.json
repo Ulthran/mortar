@@ -10,6 +10,11 @@
       "StackName": "amplify-mortar-dev-122326",
       "StackId": "arn:aws:cloudformation:us-east-1:832242454463:stack/amplify-mortar-dev-122326/30094060-8637-11ee-9d87-129c87d6a119",
       "AmplifyAppId": "dfdt3vgm4mm30"
+    },
+    "categories": {
+      "api": {
+        "mortar": {}
+      }
     }
   }
 }
