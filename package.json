@@ -17,6 +17,7 @@
     "@types/react": "~18.2.14",
     "aws-amplify": "^6.0.3",
     "expo": "~49.0.15",
+    "expo-cli": "^6.3.10",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
