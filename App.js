@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Pressable,
-  SafeAreaView
-} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, SafeAreaView } from 'react-native';
 import { generateClient } from 'aws-amplify/api';
 import { createMortar } from './src/graphql/mutations';
 import { listMortars } from './src/graphql/queries';
 
 import { Amplify } from 'aws-amplify';
-import amplifyconfig from './src/amplifyconfiguration.json';
-Amplify.configure(amplifyconfig);
+import awsmobile from './src/aws-exports';
+Amplify.configure(awsmobile);
 
 const initialState = { name: '', description: '' };
 const client = generateClient();
@@ -33,7 +26,7 @@ const App = () => {
   async function fetchMortars() {
     try {
       const mortarData = await client.graphql({
-        query: listMortars
+        query: listMortars,
       });
       const mortars = mortarData.data.listMortars.items;
       setMortars(mortars);
@@ -51,8 +44,8 @@ const App = () => {
       await client.graphql({
         query: createMortar,
         variables: {
-          input: mortar
-        }
+          input: mortar,
+        },
       });
     } catch (err) {
       console.log('error creating mortar:', err);
@@ -97,13 +90,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#ddd',
     marginBottom: 10,
     padding: 8,
-    fontSize: 18
+    fontSize: 18,
   },
   mortarName: { fontSize: 20, fontWeight: 'bold' },
   buttonContainer: {
     alignSelf: 'center',
     backgroundColor: 'black',
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
   },
-  buttonText: { color: 'white', padding: 16, fontSize: 18 }
+  buttonText: { color: 'white', padding: 16, fontSize: 18 },
 });

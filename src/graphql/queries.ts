@@ -14,11 +14,7 @@ export const getMortar = /* GraphQL */ `
   }
 `;
 export const listMortars = /* GraphQL */ `
-  query ListMortars(
-    $filter: ModelMortarFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
+  query ListMortars($filter: ModelMortarFilterInput, $limit: Int, $nextToken: String) {
     listMortars(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id

@@ -3,10 +3,7 @@
 // this is an auto generated file. This will be overwritten
 
 export const createMortar = /* GraphQL */ `
-  mutation CreateMortar(
-    $input: CreateMortarInput!
-    $condition: ModelMortarConditionInput
-  ) {
+  mutation CreateMortar($input: CreateMortarInput!, $condition: ModelMortarConditionInput) {
     createMortar(input: $input, condition: $condition) {
       id
       name
@@ -17,10 +14,7 @@ export const createMortar = /* GraphQL */ `
   }
 `;
 export const updateMortar = /* GraphQL */ `
-  mutation UpdateMortar(
-    $input: UpdateMortarInput!
-    $condition: ModelMortarConditionInput
-  ) {
+  mutation UpdateMortar($input: UpdateMortarInput!, $condition: ModelMortarConditionInput) {
     updateMortar(input: $input, condition: $condition) {
       id
       name
@@ -31,10 +25,7 @@ export const updateMortar = /* GraphQL */ `
   }
 `;
 export const deleteMortar = /* GraphQL */ `
-  mutation DeleteMortar(
-    $input: DeleteMortarInput!
-    $condition: ModelMortarConditionInput
-  ) {
+  mutation DeleteMortar($input: DeleteMortarInput!, $condition: ModelMortarConditionInput) {
     deleteMortar(input: $input, condition: $condition) {
       id
       name
